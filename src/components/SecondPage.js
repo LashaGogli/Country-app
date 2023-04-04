@@ -61,7 +61,7 @@ export default function SecondPage(props) {
                                 <div className="bordersDiv">
                                     {somecountry.borders && somecountry.borders.map(element => {
                                         let foundElement = info.find(arrayElement => arrayElement.alpha3Code === element);
-                                        return <div key={element} className="smallDivs" style={{ background: props.headerColor, color: props.headertextcolor }}> {foundElement.name}</div>;
+                                        return <div key={element} className="smallDivs" style={{ background: props.headerColor, color: props.headertextcolor }}> {<img style={{width:"100%", height:"100%"}} src={foundElement.flag} alt="flags"/>}</div>;
                                     })}
                                 </div>
 

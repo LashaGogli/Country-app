@@ -15,17 +15,12 @@ export default function Cards(props) {
         if (props.region) {
             let filteredInfo = info.filter((item) => item.region === props.region);
             if (props.searched) {
-                filteredInfo = filteredInfo.filter((item) => item.name.toUpperCase() === props.searched.toUpperCase());
-                setFilteredCountries(filteredInfo);
+                filteredInfo = filteredInfo.filter((item) => item.name.toLowerCase().includes(props.searched.toLowerCase()));
             }
             setFilteredCountries(filteredInfo);
-
-
-
         } else if (props.searched) {
-            const filteredInfo = info.filter((item) => item.name.toUpperCase() === props.searched.toUpperCase());
+            const filteredInfo = info.filter((item) => item.name.toLowerCase().includes(props.searched.toLowerCase()));
             setFilteredCountries(filteredInfo);
-
         } else {
             setFilteredCountries(info);
         }

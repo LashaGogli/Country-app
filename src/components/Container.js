@@ -21,7 +21,8 @@ export default function Container(props) {
                 <div className="filterDiv" style={{ background: props.container }}>
                     <div className="searchDiv" style={{ background: props.searchbackgroundColor }}>
                         <div className="iconDiv" style={{ background: props.searchbackgroundColor }}><img src={image} alt="searchIcon" style={{ background: props.searchbackgroundColor }} /></div>
-                        <input type="search" placeholder="Search for a country…" className="searchInput" style={{ background: props.searchbackgroundColor, color: props.textcolor }} onInput={inputValue}></input>
+                        <input type="search" placeholder="Search for a country…" className="searchInput" style={{ background: props.searchbackgroundColor, color: props.textcolor }} onChange={inputValue}></input>
+
                     </div>
 
                     <select value={props.selectedOption} className="selectForm" style={{ background: props.searchbackgroundColor, color: props.textcolor }} onChange={props.choose}>
